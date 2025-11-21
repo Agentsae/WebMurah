@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solusi Web MURAH - Jasa Pembuatan Website Profesional</title>
+    
+    <!-- Mulai Kode Favicon (Diperbarui untuk Localhost) -->
+
+    <!-- 1. Ikon Standar (Paling Umum) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- 2. Ikon High-Resolution untuk Browser Modern -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+
+    <!-- 3. Ikon untuk iOS/iPhone (Apple Touch Icon) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- 4. Ikon Web Manifest (Untuk Android dan Aplikasi PWA) -->
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Akhir Kode Favicon -->
+    <!-- CSS Sederhana (Embedded) -->
+    <style>
+        /* Pengaturan Dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff; /* Warna Utama */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 1. HEADER & NAVIGASI */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        /* Menu Desktop */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            display: block;
+        }
+        
+        /* Tombol Hamburger - Sembunyikan di Desktop */
+        .menu-toggle {
+            display: none; 
+            cursor: pointer;
+            font-size: 24px;
+            border: none;
+            background: none;
+        }
+
+        /* 2. HERO SECTION */
+        .hero {
+            background-color: #f4f7fa;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        /* 4. PAKET HARGA (PRICING) */
+        .pricing {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 2em;
+            margin-bottom: 50px;
+        }
+        .pricing-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .package-card {
+            flex: 1;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+            border: 2px solid transparent;
+        }
+        .package-card.recommended {
+            border-color: #ffc107;
+            background-color: #fffde7;
+            transform: scale(1.05);
+        }
+        .package-card h3 {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .package-card .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .package-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .package-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+ /* --- BAGIAN BARU: FORMULIR KEBUTUHAN WEBSITE --- */
+        .project-form-section {
+            padding: 60px 0;
+            background-color: #f4f7fa; /* Warna latar yang sama dengan hero */
+        }
+        .project-form-section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .project-form-section .subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .form-group input[type="file"] {
+            padding: 5px;
+        }
+        .form-group .note {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* --- MEDIA QUERIES (Responsif untuk Mobile) --- */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            /* Navigasi Mobile */
+            nav {
+                align-items: flex-start;
+            }
+            nav ul {
+                display: none; /* Sembunyikan Menu di Mobile */
+                flex-direction: column;
+                width: 100%;
+                background-color: #f9f9f9;
+                position: absolute;
+                top: 60px; /* Di bawah header */
+                left: 0;
+                padding: 10px 0;
+                box-shadow: 0 4px 4px rgba(0,0,0,0.05);
+            }
+            nav ul.active {
+                display: flex; /* Tampilkan Menu ketika 'active' */
+            }
+            nav ul li a {
+                padding: 15px 20px;
+                border-bottom: 1px solid #eee;
+            }
+            nav .cta-button {
+                display: none; /* Sembunyikan CTA di sebelah Hamburger */
+            }
+            .menu-toggle {
+                display: block; /* Tampilkan Tombol Hamburger */
+                order: 3; /* Pindah ke kanan */
+            }
+
+            /* Hero Section Mobile */
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+
+            /* Pricing Mobile: Tumpuk ke Bawah */
+            .pricing-grid {
+                flex-direction: column;
+            }
+            .package-card {
+                margin-bottom: 20px;
+                transform: none !important; /* Hilangkan scale pada mobile */
+            }
+        }
+    /* ... CSS sebelumnya ... */
+
+/* 5. FINAL CALL TO ACTION (CTA Penutup) */
+.final-cta {
+    background-color: #28a745; /* Warna hijau khas WhatsApp */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+.final-cta h2 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+.final-cta p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+.whatsapp-button {
+    background-color: #fff;
+    color: #28a745;
+    padding: 15px 35px;
+    border: 2px solid #fff;
+    font-size: 1.1em;
+}
+.whatsapp-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* 6. FOOTER */
+footer {
+    background-color: #343a40; /* Dark mode untuk footer */
+    color: #f8f9fa;
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+footer h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    margin-bottom: 8px;
+}
+footer ul li a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+footer ul li a:hover {
+    text-decoration: underline;
+}
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #495057;
+    margin-top: 30px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVIGASI -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Solusi Web MURAH</div>
+                <button class="menu-toggle" id="menuToggle">☰</button> <!-- Hamburger Icon -->
+               <ul id="mainMenu">
+    <li><a href="#pricing">Paket & Harga</a></li>
+    <!-- ... menu lainnya ... -->
+    <li><a href="#kontak">Kontak</a></li> <!-- PERUBAHAN DI SINI -->
+    </ul>
+    <!-- Perbarui juga CTA Button Utama jika ingin mengarah ke kontak -->   
+    <a href="#kontak" class="cta-button">Konsultasi Gratis</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Website Profesional Siap dalam 7 Hari untuk Tingkatkan Omzet Bisnis MURAH Anda.</h1>
+            <p>Kami sediakan solusi website lengkap, desain modern, dan harga terjangkau. Fokus saja pada bisnis, urusan web biar kami yang atasi.</p>
+            <a href="#pricing" class="cta-button">Lihat Pilihan Paket Kami</a>
+            <div style="margin-top: 20px; font-size: 0.9em; color: #777;">
+                Garansi Uang Kembali • Free Domain 1 Tahun • Dukungan Penuh
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. AI FEATURE SECTION -->
+<section id="ai-generator-section" class="hero" style="background-color: #e6f7ff;">
+    <div class="container">
+        <h2 style="color: #007bff;">Coba AI Website Idea Generator Kami</h2>
+        <p>Jawab 2 pertanyaan, dan AI akan membantu merumuskan *headline* website bisnis Anda!</p>
+        <div style="max-width: 500px; margin: 0 auto; text-align: left;">
+            <label for="jenisBisnis">Jenis Bisnis (Contoh: Katering, Bengkel):</label>
+            <input type="text" id="jenisBisnis" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="keunikan">Keunikan Bisnis (Contoh: Organik, Gratis Ongkir):</label>
+            <input type="text" id="keunikan" style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <button id="generateAI" class="cta-button" style="width: 100%;">Generate Headline & Deskripsi</button>
+
+            <!-- Area Hasil AI -->
+            <div id="aiResult" style="margin-top: 30px; padding: 15px; border: 1px dashed #007bff; border-radius: 5px; background-color: #fff; display: none;">
+                <p><strong>Hasil AI:</strong></p>
+                <p id="aiOutputText">Loading...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 4. PAKET HARGA (PRICING) -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <h2>Pilih Paket Website yang Sesuai Anggaran Bisnis Anda</h2>
+        <div class="pricing-grid">
+            
+            <!-- Paket 1: BASIC -->
+            <div class="package-card">
+                <h3>Paket Basic</h3>
+                <p>Cocok untuk: Katalog Produk Sederhana/Personal Branding.</p>
+                <p class="price">Rp 30 rb</p>
+                <ul>
+                    <li>&#10003; 3 Halaman Utama (Home, About, Contact)</li>
+                    <li>&#10003; Desain Responsif (Mobile Friendly)</li>
+                    <li>&#10005; Fitur E-commerce</li>
+                </ul>
+                <!-- TOMBOL WHATSAPP UNTUK BASIC -->
+                <a href="https://wa.me/6282210248211?text=Halo%20WebMurah%2C%20saya%20tertarik%20dengan%20Paket%20BASIC%20(Rp%2030%20rb).%20Mohon%20info%20lanjut%20proses%20pemesanan." 
+                   class="cta-button" 
+                   style="background-color: #4CAF50;" 
+                   target="_blank">
+                   Pilih Paket Basic
+                </a>
+            </div>
+
+            <!-- Paket 2: STANDAR (Rekomendasi) -->
+            <div class="package-card recommended">
+                <h3>Paket Standar</h3>
+                <p>Cocok untuk: Website Perusahaan/Toko Online Sederhana.</p>
+                <p class="price">Rp 500 rb</p>
+                <ul>
+                    <li>&#10003; Semua di Paket Basic</li>
+                    <li>&#10003; Halaman Produk/Jasa Unlimited</li>
+                    <li>&#10003; Fitur Chat WhatsApp Otomatis</li>
+                    <li>&#10003; Integrasi Akun Media Sosial</li>
+                </ul>
+                <!-- TOMBOL WHATSAPP UNTUK STANDAR -->
+                <a href="https://wa.me/6282210248211?text=Halo%20WebMurah%2C%20saya%20tertarik%20dengan%20Paket%20STANDAR%20(Rp%20500%20rb)%20yang%20direkomendasikan.%20Mohon%20info%20lanjut%20proses%20pemesanan." 
+                   class="cta-button" 
+                   target="_blank">
+                   Pesan Paket Standar
+                </a>
+            </div>
+
+            <!-- Paket 3: PREMIUM -->
+            <div class="package-card">
+                <h3>Paket Premium</h3>
+                <p>Cocok untuk: Bisnis yang butuh fitur kustom & integrasi kompleks.</p>
+                <p class="price">Mulai dari Rp 1.5 Juta</p>
+                <ul>
+                    <li>&#10003; Semua di Paket Standar</li>
+                    <li>&#10003; Integrasi Payment Gateway (Midtrans, dll.)</li>
+                    <li>&#10003; Fitur Multi-Bahasa</li>
+                    <li>&#10003; Pelatihan SEO On-Page Lanjutan</li>
+                </ul>
+                <!-- TOMBOL WHATSAPP UNTUK PREMIUM -->
+                <a href="https://wa.me/6282210248211?text=Halo%20WebMurah%2C%20saya%20tertarik%20dengan%20Paket%20PREMIUM%20(Mulai%20Rp%201.5%20Juta).%20Mohon%20info%20lanjut%20dan%20penawaran%20kustom." 
+                   class="cta-button" 
+                   style="background-color: #4CAF50;" 
+                   target="_blank">
+                   Minta Penawaran Kustom
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="project-form" class="project-form-section">
+        <div class="container">
+            <h2>Mulai Proyek Website Anda</h2>
+            <p class="subtitle">Isi formulir di bawah ini agar kami dapat memahami kebutuhan Anda dengan lebih baik.</p>
+            
+            <div class="form-container">
+                <!-- PENTING: Ganti action="#" dengan URL endpoint Anda, contoh dari Formspree -->
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    
+                    <!-- Informasi Kontak -->
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap Anda</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">Nomor WhatsApp Aktif</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 08123456789" required>
+                    </div>
+
+                    <hr style="margin: 30px 0; border: 1px solid #eee;">
+
+                    <!-- Informasi Website -->
+                    <div class="form-group">
+                        <label for="nama-bisnis">Nama Bisnis / Organisasi</label>
+                        <input type="text" id="nama-bisnis" name="nama_bisnis">
+                    </div>
+                    <div class="form-group">
+                        <label for="jenis-website">Jenis Website yang Diinginkan</label>
+                        <select id="jenis-website" name="jenis_website">
+                            <option value="profil_perusahaan">Website Profil Perusahaan</option>
+                            <option value="toko_online">Toko Online (E-commerce)</option>
+                            <option value="landing_page">Landing Page</option>
+                            <option value="blog_pribadi">Blog Pribadi / Portofolio</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="deskripsi">Jelaskan secara singkat website seperti apa yang Anda inginkan</label>
+                        <textarea id="deskripsi" name="deskripsi" placeholder="Contoh: Saya ingin website untuk katering saya, ada halaman menu, galeri foto, dan kontak."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="referensi">Apakah ada contoh website yang Anda sukai? (Opsional)</label>
+                        <input type="url" id="referensi" name="referensi" placeholder="https://contohwebsitekeren.com">
+                    </div>
+
+                    <!-- Upload File -->
+                    <div class="form-group">
+                        <label for="file-upload">Upload Logo / Materi Pendukung (Opsional)</label>
+                        <input type="file" id="file-upload" name="file_upload" multiple>
+                        <p class="note">Anda bisa mengunggah lebih dari satu file (gambar, dokumen). Maksimal 5MB.</p>
+                    </div>
+
+                    <!-- Tombol Submit -->
+                    <div class="form-group" style="text-align: center; margin-top: 30px;">
+                        <button type="submit" class="cta-button" style="width: 100%; padding: 15px;">Kirim Permintaan Proyek</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- KONTEN LANJUTAN... -->
+
+    <!-- JAVASCRIPT UNTUK MENU TOGGLE (Responsif) -->
+     <!-- 5. FINAL CALL TO ACTION (CTA Penutup) -->
+<section id="kontak" class="final-cta">
+    <!-- ... konten CTA ... -->
+    <div class="container">
+        <h2>Siap Memajukan Bisnis Anda dengan Website Profesional?</h2>
+        <p>Kami siap membantu! Hubungi tim konsultan kami sekarang juga.</p>
+        <!-- Ganti 6281xxxxxxxx dengan nomor WhatsApp Anda! -->
+        <a href="https://wa.me/6282210248211?text=Halo%20WebMurah%2C%20saya%20tertarik%20untuk%20membuat%20website%20untuk%20UMKM%20saya." 
+           class="cta-button whatsapp-button" target="_blank">
+           Hubungi Kami via WhatsApp
+        </a>
+    </div>
+</section>
+
+<!-- 6. FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            
+            <!-- Kolom 1: Informasi Perusahaan -->
+            <div>
+                <h4>Solusi Web MURAH</h4>
+                <p>Jasa pembuatan website profesional yang terjangkau untuk bisnis kecil dan menengah di Indonesia.</p>
+            </div>
+
+            <!-- Kolom 2: Navigasi Cepat -->
+            <div>
+                <h4>Navigasi Cepat</h4>
+                <ul>
+                    <li><a href="#pricing">Paket & Harga</a></li>
+                    <li><a href="#">Portofolio</a></li>
+                    <li><a href="#">Proses Kerja</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Kontak Kami -->
+            <div>
+                <h4>Kontak Kami</h4>
+                <ul>
+                    <li>Email: info@solusiwebmurah.com</li>
+                    <li>Telp/WA: +62 82210248211</li>
+                    <!-- Tambahkan tautan media sosial di sini jika ada -->
+                </ul>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            &copy; 2024 Solusi Web MURAH. Hak Cipta Dilindungi. | <a href="#" style="color: #007bff;">Kebijakan Privasi</a>
+        </div>
+    </div>
+</footer>
+    <script>
+        // Ambil elemen tombol toggle dan daftar menu
+        const menuToggle = document.getElementById('menuToggle');
+        const mainMenu = document.getElementById('mainMenu');
+
+        // Tambahkan event listener untuk merespons klik
+        menuToggle.addEventListener('click', function() {
+            // Toggle class 'active' pada daftar menu
+            // Jika menu aktif, ia akan ditutup. Jika tertutup, ia akan dibuka.
+            mainMenu.classList.toggle('active');
+
+            // Opsional: Mengganti ikon hamburger menjadi X saat menu terbuka
+            if (mainMenu.classList.contains('active')) {
+                menuToggle.textContent = '✕'; // Ganti ke ikon X
+            } else {
+                menuToggle.textContent = '☰'; // Kembali ke ikon Hamburger
+            }
+        }); // <-- THIS CLOSING BRACE WAS MISSING
+
+       // ... kode JavaScript lainnya ...
+
+    // FUNGSI UNTUK MENGHUBUNGKAN KE AI GENERATOR (Apps Script)
+    document.getElementById('generateAI').addEventListener('click', async function() {
+        const GEMINI_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwSjBNS-U0sKFUbE8hocVZTNgwIGkEHPbtRYTu2FkzItt0XDibQ097K0nTePgm0AlNk/exec"; // <--- PENTING: GANTI URL INI!
+        
+        const jenis = document.getElementById('jenisBisnis').value;
+        const unik = document.getElementById('keunikan').value;
+        const resultDiv = document.getElementById('aiResult');
+        const outputText = document.getElementById('aiOutputText');
+        
+        if (!jenis || !unik) {
+            alert("Harap isi Jenis Bisnis dan Keunikan terlebih dahulu!");
+            return;
+        }
+        
+        resultDiv.style.display = 'block';
+        outputText.innerHTML = "AI sedang memproses ide Anda... Tunggu sebentar.";
+        this.disabled = true;
+
+        try {
+            const response = await fetch(GEMINI_WEB_APP_URL, {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8', // Apps Script biasanya butuh text/plain
+                },
+                body: JSON.stringify({ jenis: jenis, unik: unik })
+            });
+
+            const result = await response.json();
+
+            if (result.error) {
+                 outputText.innerHTML = `<strong>Error:</strong> ${result.error}`;
+            } else {
+                 // Menampilkan hasil yang diformat dari AI
+                outputText.innerHTML = `
+                    <p><strong>Headline:</strong> ${result.headline}</p>
+                    <p><strong>Deskripsi:</strong> ${result.deskripsi}</p>
+                    <p style="font-size: 0.9em; margin-top: 15px;">Ide ini dibuat oleh Google Gemini. Hubungi kami untuk implementasi!</p>
+                `;
+            }
+
+        } catch (error) {
+            outputText.innerHTML = `Terjadi kesalahan koneksi. Cek konsol browser atau Web App URL. Error: ${error.message}`;
+        } finally {
+            this.disabled = false;
+        }
+    });
+        
+    </script>
+
+</body>
+</html>
